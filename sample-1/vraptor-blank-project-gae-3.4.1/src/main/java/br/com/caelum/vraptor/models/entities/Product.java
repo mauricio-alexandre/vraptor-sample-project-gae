@@ -23,7 +23,7 @@ public class Product {
 
 	@Persistent
 	private String description;
-	
+
 	@Persistent
 	private String descriptionUpperCase;
 
@@ -42,13 +42,19 @@ public class Product {
 	public Product(String name, String description, Double price, int amout,
 			Date registrationDate, Date updateDate) {
 		this.name = name;
-		nameUpperCase = name.toUpperCase();
 		this.description = description;
-		descriptionUpperCase = description.toUpperCase();
 		this.price = price;
 		this.amount = amout;
 		this.registrationDate = registrationDate;
 		this.updateDate = updateDate;
+
+		if (name != null) {
+			nameUpperCase = name.toUpperCase();
+		}
+
+		if (description != null) {
+			descriptionUpperCase = description.toUpperCase();
+		}
 	}
 
 	public Long getId() {
@@ -65,7 +71,10 @@ public class Product {
 
 	public void setName(String name) {
 		this.name = name;
-		nameUpperCase = name.toUpperCase();
+
+		if (name != null) {
+			nameUpperCase = name.toUpperCase();
+		}
 	}
 
 	public String getNameUpperCase() {
@@ -78,7 +87,10 @@ public class Product {
 
 	public void setDescription(String description) {
 		this.description = description;
-		descriptionUpperCase = description.toUpperCase();
+
+		if (description != null) {
+			descriptionUpperCase = description.toUpperCase();
+		}
 	}
 
 	public String getDescriptionUpperCase() {
