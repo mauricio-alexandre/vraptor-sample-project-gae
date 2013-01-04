@@ -1,0 +1,41 @@
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Good Buy</title>
+		<link href="<c:url value="/goodbuy.css"/>" rel="stylesheet" type="text/css" media="screen" />
+		<link href="<c:url value="/javascripts/jquery.autocomplete.css"/>" rel="stylesheet" type="text/css" media="screen" />
+		<fmt:setLocale value="en_us"/>
+		<!--<fmt:setLocale value="pt-BR"/>-->
+	</head>
+	
+<body>
+	<div id="header">
+	</div>
+	<div id="erros">
+		<ul>
+			<c:forEach items="${errors}" var="error">
+				<li>${error.category } - ${error.message }</li>
+			</c:forEach>
+		</ul>
+	</div>
+	<div id="body">
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="<c:url value="/products/new"/>">New Product</a>
+				</li>
+				<li>
+					<a href="<c:url value="/products"/>">Products List</a>
+				</li>
+				<li>
+					<form action="<c:url value="/products/search"/>">
+						<input id="search" name="name"/>
+					</form>
+				</li>
+			</ul>
+		</div>
+		<div id="content">
+		
