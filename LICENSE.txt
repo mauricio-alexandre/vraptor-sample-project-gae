@@ -2,4 +2,4 @@ LGPL-3.0 http://opensource.org/licenses/lgpl-3.0.html
 
 All the samples is open source. 
 You can redistribute and or modify them according to the LGPL terms.
-This program is distributed in the hope to be useful, but with NO WARRANTY.
+These samples are distributed in the hope to be useful, but with NO WARRANTY.
